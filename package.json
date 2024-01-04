@@ -22,7 +22,9 @@
   "author": "",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
+    "@types/mdast": "^4.0.3",
     "@types/node": "^20.10.6",
+    "@types/unist": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@typescript-eslint/parser": "^6.17.0",
     "commitizen": "^4.3.0",
@@ -36,5 +38,9 @@
     "vite-plugin-inspect": "^0.8.1"
   },
   "dependencies": {
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "unified": "^11.0.4",
+    "unist-util-visit": "^5.0.0"
   }
 }
