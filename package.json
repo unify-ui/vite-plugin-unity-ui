@@ -38,6 +38,7 @@
     "vite-plugin-inspect": "^0.8.1"
   },
   "dependencies": {
+    "remark-frontmatter": "^5.0.0",
     "remark-parse": "^11.0.0",
     "remark-stringify": "^11.0.0",
     "unified": "^11.0.4",
