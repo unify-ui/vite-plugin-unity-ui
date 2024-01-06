@@ -22,11 +22,12 @@
   "author": "",
   "devDependencies": {
     "@tsconfig/recommended": "^1.0.3",
+    "@types/babel__traverse": "^7.20.5",
     "@types/mdast": "^4.0.3",
     "@types/node": "^20.10.6",
     "@types/unist": "^3.0.2",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.0",
+    "@typescript-eslint/parser": "^6.18.0",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
@@ -34,10 +35,14 @@
     "prettier": "^3.1.1",
     "typedoc": "^0.25.6",
     "typescript": "^5.3.3",
-    "vite": "^5.0.10",
-    "vite-plugin-inspect": "^0.8.1"
+    "vite": "^5.0.11"
   },
   "dependencies": {
+    "@babel/generator": "^7.23.6",
+    "@babel/parser": "^7.23.6",
+    "@babel/template": "^7.22.15",
+    "@babel/traverse": "^7.23.7",
+    "htmlparser2": "^9.1.0",
     "remark-frontmatter": "^5.0.0",
     "remark-parse": "^11.0.0",
     "remark-stringify": "^11.0.0",
