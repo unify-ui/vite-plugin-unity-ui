@@ -1,12 +1,23 @@
 import type { Plugin } from "vite";
-import Inspect from "vite-plugin-inspect";
+import { changeMarkdownContent } from "./changeMarkdownContent.js";
 
-import unifyUiPlugin from "./vite-plugin-unify-ui.js";
+const fileRegex = /\.(md)$/;
 
-export default function (options?: { inspect?: boolean }): Plugin[] {
-  if (options?.inspect) {
-    return [Inspect(), unifyUiPlugin()];
-  }
+export default function (): Plugin {
+  return {
+    name: "vite-plugin-uinify-ui",
 
-  return [unifyUiPlugin()];
+    enforce: "pre",
+
+    async transform(src, id) {
+      if (fileRegex.test(id)) {
+        const code = await changeMarkdownContent(src);
+        return {
+          code,
+          map: null,
+        };
+      }
+      return null;
+    },
+  };
 }
