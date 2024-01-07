@@ -18,6 +18,7 @@
     "test:watch": "node --enable-source-maps --test --watch dist/",
     "cz": "cz"
   },
+  "license": "MIT",
   "keywords": [],
   "author": "",
   "devDependencies": {
