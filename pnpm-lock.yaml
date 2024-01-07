@@ -11,9 +11,6 @@ dependencies:
   '@babel/parser':
     specifier: ^7.23.6
     version: 7.23.6
-  '@babel/template':
-    specifier: ^7.22.15
-    version: 7.22.15
   '@babel/traverse':
     specifier: ^7.23.7
     version: 7.23.7
@@ -37,9 +34,21 @@ dependencies:
     version: 5.0.0
 
 devDependencies:
+  '@babel/template':
+    specifier: ^7.22.15
+    version: 7.22.15
+  '@babel/types':
+    specifier: ^7.23.6
+    version: 7.23.6
   '@tsconfig/recommended':
     specifier: ^1.0.3
     version: 1.0.3
+  '@types/babel__generator':
+    specifier: ^7.6.8
+    version: 7.6.8
+  '@types/babel__template':
+    specifier: ^7.4.4
+    version: 7.4.4
   '@types/babel__traverse':
     specifier: ^7.20.5
     version: 7.20.5
@@ -159,7 +168,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.23.6
-    dev: false
 
   /@babel/template@7.22.15:
     resolution: {integrity: sha512-QPErUVm4uyJa60rkI73qneDacvdvzxshT3kksGqlGWYdOTIUOwJ7RDUL8sGqslY1uXWSL6xMFKEXDS3ox2uF0w==}
@@ -168,7 +176,6 @@ packages:
       '@babel/code-frame': 7.23.5
       '@babel/parser': 7.23.6
       '@babel/types': 7.23.6
-    dev: false
 
   /@babel/traverse@7.23.7:
     resolution: {integrity: sha512-tY3mM8rH9jM0YHFGyfC0/xf+SB5eKUu7HPj7/k3fpi9dAlsMc5YbQvDi0Sh2QTPXqMhyaAtzAr807TIyfQrmyg==}
@@ -679,6 +686,19 @@ packages:
 
   /@tsconfig/recommended@1.0.3:
     resolution: {integrity: sha512-+jby/Guq9H8O7NWgCv6X8VAiQE8Dr/nccsCtL74xyHKhu2Knu5EAKmOZj3nLCnLm1KooUzKY+5DsnGVqhM8/wQ==}
+    dev: true
+
+  /@types/babel__generator@7.6.8:
+    resolution: {integrity: sha512-ASsj+tpEDsEiFr1arWrlN6V3mdfjRMZt6LtK/Vp/kreFLnr5QH5+DhvD5nINYZXzwJvXeGq+05iUXcAzVrqWtw==}
+    dependencies:
+      '@babel/types': 7.23.6
+    dev: true
+
+  /@types/babel__template@7.4.4:
+    resolution: {integrity: sha512-h/NUaSyG5EyxBIp8YRxo4RMe2/qQgvyowRwVMzhYhBCONbW8PUsg4lkFMrhgZhUe5z3L3MiLDuvyJ/CaPa2A8A==}
+    dependencies:
+      '@babel/parser': 7.23.6
+      '@babel/types': 7.23.6
     dev: true
 
   /@types/babel__traverse@7.20.5:
