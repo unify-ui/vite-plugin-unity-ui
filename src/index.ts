@@ -1,5 +1,5 @@
 import type { Plugin } from "vite";
-import { changeMarkdownContent } from "./changeMarkdownContent.js";
+import { changeMarkdownContent } from "./changeMarkdownContent/index.js";
 
 const fileRegex = /\.(md)$/;
 
