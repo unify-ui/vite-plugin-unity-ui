@@ -8,27 +8,12 @@ import remarkFrontmatter from "remark-frontmatter";
 import { getMarkdownImportContent } from "./getMarkdownImportContent.js";
 import { changeMarkdownImportContent } from "./changeMarkdownImportContent.js";
 
-const startRegExp = /^:::\sraw\n$/;
-const endRegExp = /^\n:::$/;
-
 export async function changeMarkdownContent(content: string) {
   const result = await unified()
     .use(remarkParse)
     .use(remarkFrontmatter)
     .use(() => (mdast: Root) => {
-      visit(mdast, ["paragraph", "html"], (node) => {
-        if (node.type === "paragraph") {
-          visit(node, "text", (node) => {
-            if (startRegExp.test(node.value)) {
-              node.value = node.value + '<div class="vp-raw">';
-            }
-
-            if (endRegExp.test(node.value)) {
-              node.value = "</div>" + node.value;
-            }
-          });
-        }
-
+      visit(mdast, ["html"], (node) => {
         if (node.type === "html" && node.value.includes("<script setup")) {
           const importContent = getMarkdownImportContent(node.value);
           const newImportContent = changeMarkdownImportContent(importContent);
